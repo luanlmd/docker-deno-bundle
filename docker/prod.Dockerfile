@@ -1,5 +1,9 @@
 FROM hayd/alpine-deno:1.4.0
 
-WORKDIR /src
+WORKDIR /app
 
-ENTRYPOINT ["deno", "bundle", "/src/index.ts", "/public/bundle.js"]
+ADD . /app
+
+RUN ls -la /app
+
+RUN deno bundle /app/src/index.ts /app/public/bundle.js

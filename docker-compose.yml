@@ -6,5 +6,4 @@ services:
       dockerfile: docker/dev.Dockerfile
     network_mode: host
     volumes:
-      - ./src:/src
-      - ./public:/public
+      - ./:/app
