@@ -1,9 +1,16 @@
 version: '3'
 services:
-  app:
+  builder:
     build:
       context: . 
       dockerfile: docker/dev.Dockerfile
     network_mode: host
     volumes:
       - ./:/app
+  web:
+    image: nginx
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./public/index.html:/usr/share/nginx/html/index.html
+    ports:
+    - "8080:80"
