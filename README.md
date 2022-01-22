@@ -4,10 +4,15 @@ Project structure for Deno Bundle development and deploy using Docker
 
 ## Development build
 
-Just use docker-compose for it
+Just use docker-compose for dev
 
 ```bash
 docker-compose up
+```
+
+Navigate to:
+```
+http://localhost:8080
 ```
 
 ## Production build
